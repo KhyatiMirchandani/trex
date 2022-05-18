@@ -4,10 +4,10 @@ var Whorse, WhorseImg, WhorseG;
 var hay, hayImg, hayG
 var stick,stickG,stickImg
 var restart
-var gameover
+var gameover, gameoverImg
 var score=0
 var endImg
-var gameState = 1;
+var gameState = PLAY;
 var END =0;
 var PLAY =1;
 
@@ -17,7 +17,7 @@ horseImg = loadAnimation("black horse.png","black horse 2.png" );
 WhorseImg = loadImage("white_horse.png");
 hayImg = loadImage("HAY.png");
 stickImg= loadImage("stick.png");
-endImg = loadImage("gameOver.png");
+gameoverImg = loadImage("gameOver.png");
 restartImg = loadImage("restart.png")
 }
 
@@ -33,7 +33,7 @@ horse.addAnimation("running",horseImg);
 horse.scale=0.1;
 
 gameOver = createSprite(700,200);
-  gameOver.addImage(endImg);
+  gameOver.addImage( gameoverImg);
   
   restart = createSprite(700,240);
   restart.addImage(restartImg);
